@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+}
+
+body {
+  background-color: whitesmoke;
+}
+
+.app {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+.app__left {
+  flex: 0.9;
+}
+.app__right {
+}
+
+.app__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.app__stats {
+  display: flex;
+  justify-content: space-between;
+}
+
+.table {
+  margin-top: 20px;
+  overflow: scroll;
+  height: 400px;
+}
+
+.table tr:nth-of-type(odd) {
+  background-color: #f3f2f8;
+}
+
+.table tr {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+
+@media (max-width: 990px) {
+  .app {
+    flex-direction: column;
+  }
+  .app__right {
+    margin-top: 20px;
+  }
+
+  .app__right h3:last-child {
+    margin-top: 20px;
+  }
+}
+
+.map {
+  height: 500px;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 20px;
+  margin-top: 16px;
+  box-shadow: 0 0 8px -4px black;
+}
+
+.map .leaflet-container {
+  height: 100%;
+}
+
+.infoBox {
+  flex: 1;
+}
+
+.infoBox:hover {
+  background-color: #f3f2f8;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px black;
+}
+
+.infoBox:not(:last-child) {
+  margin-right: 25px;
+}
+
+.infoBox__cases {
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.infoBox__total {
+  color: #cc1034;
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
